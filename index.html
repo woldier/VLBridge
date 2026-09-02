@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>VLBridge: Domain Generalizable Remote Sensing Semantic Segmentation via Textual-Guided Tuning</title>
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+          <a href="https://github.com/woldier/Bridge" class="work-item" target="_blank">
+              <div class="work-info">
+                  <!-- TODO: Replace with actual paper title -->
+                  <h5>Bridge: Leveraging Vision Foundation Models for Efficient Cross-Domain Remote Sensing Segmentation</h5>
+                  <!-- TODO: Replace with brief description -->
+<!--                  <p>Brief description of the work and its main contribution.</p>-->
+                  <!-- TODO: Replace with venue and year -->
+                  <span class="work-venue">TGRS 2026</span>
+              </div>
+              <i class="fas fa-external-link-alt"></i>
+          </a>
+        <a href="https://github.com/woldier/EntSeg" class="work-item" target="_blank">
+              <div class="work-info">
+                  <!-- TODO: Replace with actual paper title -->
+                  <h5>EntSeg: Entropy-Guided Pseudolabel Denoising and Masked Image Consistency for Cross-Domain Remote Sensing Segmentation</h5>
+                  <!-- TODO: Replace with brief description -->
+<!--                  <p>Brief description of the work and its main contribution.</p>-->
+                  <!-- TODO: Replace with venue and year -->
+                  <span class="work-venue">TGRS 2026</span>
+              </div>
+              <i class="fas fa-external-link-alt"></i>
+          </a>
+
+              <a href="https://github.com/woldier/MsRE" class="work-item" target="_blank">
+              <div class="work-info">
+                  <!-- TODO: Replace with actual paper title -->
+                  <h5>MsRE: Towards Efficient Remote Sensing Segmentation via Vision Foundation Models</h5>
+                  <!-- TODO: Replace with brief description -->
+<!--                  <p>Brief description of the work and its main contribution.</p>-->
+                  <!-- TODO: Replace with venue and year -->
+                  <span class="work-venue">TGRS 2026</span>
+              </div>
+              <i class="fas fa-external-link-alt"></i>
+          </a>
+        <!-- TODO: Replace with your lab's related works -->
+<!--        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">-->
+<!--          <div class="work-info">-->
+<!--            &lt;!&ndash; TODO: Replace with actual paper title &ndash;&gt;-->
+<!--            <h5>Paper Title 1</h5>-->
+<!--            &lt;!&ndash; TODO: Replace with brief description &ndash;&gt;-->
+<!--            <p>Brief description of the work and its main contribution.</p>-->
+<!--            &lt;!&ndash; TODO: Replace with venue and year &ndash;&gt;-->
+<!--            <span class="work-venue">Conference/Journal 2024</span>-->
+<!--          </div>-->
+<!--          <i class="fas fa-external-link-alt"></i>-->
+<!--        </a>-->
+        <!-- TODO: Add more related works or remove extra items -->
+<!--        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">-->
+<!--          <div class="work-info">-->
+<!--            <h5>Paper Title 2</h5>-->
+<!--            <p>Brief description of the work and its main contribution.</p>-->
+<!--            <span class="work-venue">Conference/Journal 2023</span>-->
+<!--          </div>-->
+<!--          <i class="fas fa-external-link-alt"></i>-->
+<!--        </a>-->
+
+<!--        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">-->
+<!--          <div class="work-info">-->
+<!--            <h5>Paper Title 3</h5>-->
+<!--            <p>Brief description of the work and its main contribution.</p>-->
+<!--            <span class="work-venue">Conference/Journal 2023</span>-->
+<!--          </div>-->
+<!--          <i class="fas fa-external-link-alt"></i>-->
+<!--        </a>-->
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">
+                VLBridge: Domain Generalizable Remote Sensing Semantic Segmentation via Textual-Guided Tuning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=Df8myR8AAAAJ&hl=zh-CN&oi=sra" target="_blank">Bin Wang</a><sup>1</sup>,</span>
+
+<!--                <span class="author-block">-->
+<!--&lt;!&ndash;                    <a href="#" target="_blank">Shun Lv</a>&ndash;&gt;-->
+<!--                    Shun Lv<sup>1</sup>,</span>-->
+<!--                <span class="author-block">-->
+<!--&lt;!&ndash;                    <a href="#" target="_blank">Zhi Li</a>&ndash;&gt;-->
+<!--                    Zhi Li<sup>1</sup>,</span>-->
+<!--              <span class="author-block">-->
+<!--&lt;!&ndash;                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Fei Deng</a>&ndash;&gt;-->
+<!--                  Fei Deng<sup>2</sup>,</span>-->
+
+              <span class="author-block">
+<!--                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yiguang Liu</a> -->
+                    Yiguang Liu<sup>1</sup>
+              </span>
+            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">
+                      <sup>1</sup> Sichuan University
+<!--                      <sup>2</sup> Chengdu University of Technology-->
+<!--                  <br>Conference name and year-->
+<!--                  <br>TGRS 2026-->
+                      <br>In Peer Review
+                    </span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="#" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+<!--                    <span class="link-block">-->
+<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+<!--                      class="external-link button is-normal is-rounded is-dark">-->
+<!--                      <span class="icon">-->
+<!--                        <i class="fas fa-file-pdf"></i>-->
+<!--                      </span>-->
+<!--                      <span>Supplementary</span>-->
+<!--                    </a>-->
+<!--                  </span>-->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/woldier/VLBridge" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+<!--                <span class="link-block">-->
+<!--                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"-->
+<!--                  class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                    <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      &lt;!&ndash; TODO: Replace with your teaser video &ndash;&gt;-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">-->
+<!--        &lt;!&ndash; TODO: Add your video file path here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4" type="video/mp4">-->
+<!--      </video>-->
+<!--      &lt;!&ndash; TODO: Replace with your video description &ndash;&gt;-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+        <img src="static/images/overview.png" alt="Overview" loading="lazy"/>
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+        Overview of MsRE.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+Remote sensing semantic segmentation aims to assign pixel-level semantic labels to aerial or satellite images, but its practical deployment is often hindered by domain shifts caused by different sensors, imaging conditions, geographical regions, and spectral modalities.
+Recent Vision Foundation Models (VFMs) provide strong transferable representations
+for domain-generalizable segmentation,
+yet fully fine-tuning large VFMs is computationally expensive.
+Moreover, existing adaptation strategies do not fully exploit class-level language semantics jointly during
+backbone refinement and query initialization.
+In this paper, we propose VLBridge, a textual-guided tuning framework for domain generalizable remote sensing semantic segmentation.
+The core idea of VLBridge is to use category text embeddings as stable semantic anchors to bridge VFM feature adaptation and mask prediction. Specifically, VLBridge introduces language-guided bridge tuning into the frozen VFM backbone, where learnable bridge tokens are conditioned on class text embeddings and interact with intermediate visual tokens to refine features. Moreover, VLBridge constructs text-aware semantic queries for the
+mask decoding
+by expanding class text embeddings into multiple query slots, enabling category-aware mask prediction. By injecting textual semantics into both feature extraction and query initialization, VLBridge provides an efficient and semantically grounded way to adapt strong VFMs to remote sensing segmentation under domain shifts. Extensive experiments validate the effectiveness of the proposed framework.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!--<section id="benchmark" class="section">-->
+<!--  <div class="container is-max-widescreen">-->
+<!--      <h2 class="title is-3 section-header has-text-centered">Performance Highlights</h2>-->
+<!--      <div class="content">-->
+<!--          <p>-->
+<!--              &lt;!&ndash;                      Comprehensive comparison of <strong>ACE-Brain-0</strong> against state-of-the-art models across <strong>24&ndash;&gt;-->
+<!--              &lt;!&ndash;                      benchmarks</strong> spanning four intelligence domains. <strong>Bold</strong> values denote the best&ndash;&gt;-->
+<!--              &lt;!&ndash;                      result per benchmark; <span class="metric-note-inline">↓</span> denotes lower-is-better.&ndash;&gt;-->
+<!--              Semantic segmentation result (mIoU%) comparisons across different methods on the <strong>Potsdam</strong>, <strong>Vaihingen</strong>, and <strong>LoveDA</strong> datasets.-->
+<!--          </p>-->
+
+<!--          <div class="table-container benchmark-table-container">-->
+<!--              <table class="table is-hoverable benchmark-table">-->
+<!--                  <thead>-->
+<!--                  <tr>-->
+<!--                      <th class="bench-name-th">Method</th>-->
+<!--                      <th>Pre-Train</br>Method</th>-->
+<!--                      <th>Pre-Train</br>Dataset</th>-->
+<!--                      <th>Backbone</br>and Scale</th>-->
+<!--                      <th>Fine-Tune</br>Params<span class="metric-note-inline">↓</span></th>-->
+<!--                      <th>Potsdam</br>(mIoU%)</th>-->
+<!--                      <th>Vaihigen</br>(mIoU%)</th>-->
+<!--                      <th>LoveDA</br>(mIoU%)</th>-->
+<!--                      <th class="ace-brain-th">Average</br>(mIoU%)</th>-->
+<!--                  </tr>-->
+<!--                  </thead>-->
+<!--                  <tbody>-->
+
+<!--                  &lt;!&ndash; ── Spatial Intelligence ── &ndash;&gt;-->
+<!--                  <tr class="domain-row domain-spatial">-->
+<!--                      <td colspan="9" style="color: #9b9b9b;"> I. Specific Segmentation Methods</td>-->
+<!--                  </tr>-->
+<!--                  <tr class="domain-row domain-spatial">-->
+<!--                      <td colspan="9" style="color: #c0c0c0; padding-left: 20px;">1. General Segmentation Methods</td>-->
+<!--                  </tr>-->
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">DeepLabV3+</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>Resnet-50</td>-->
+<!--                      <td>25.2 M</td>-->
+<!--                      <td>73.43</td>-->
+<!--                      <td> 71.87</td>-->
+<!--                      <td> 45.33</td>-->
+<!--                      <td class="ace-brain-td best-cell">63.54</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">UperNet</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>Resnet-50</td>-->
+<!--                      <td>25.2 M</td>-->
+<!--                      <td>73.43</td>-->
+<!--                      <td>71.86</td>-->
+<!--                      <td>46.28</td>-->
+<!--                      <td class="ace-brain-td best-cell">63.85</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Segformer</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>MiT-B5</td>-->
+<!--                      <td>89.9 M</td>-->
+<!--                      <td> 79.01</td>-->
+<!--                      <td>74.38</td>-->
+<!--                      <td>49.69</td>-->
+<!--                      <td class="ace-brain-td best-cell">67.69</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Segmenter</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>304.3 M</td>-->
+<!--                      <td>78.24</td>-->
+<!--                      <td>73.12</td>-->
+<!--                      <td>53.34</td>-->
+<!--                      <td class="ace-brain-td best-cell">68.23</td>-->
+<!--                  </tr>-->
+
+
+
+<!--                  <tr class="domain-row domain-driving">-->
+<!--                      <td colspan="9" style="color: #c0c0c0; padding-left: 20px;">2. Remote Sensing Segmentation Methods</td>-->
+<!--                  </tr>-->
+
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">UNetFormer</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>ResNet-18</td>-->
+<!--                      <td> 11.6 M</td>-->
+<!--                      <td>74.16</td>-->
+<!--                      <td>72.38</td>-->
+<!--                      <td>46.83</td>-->
+<!--                      <td class="ace-brain-td best-cell">64.45</td>-->
+<!--                  </tr>-->
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">FSegNet</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>FasterViT-3</td>-->
+<!--                      <td>159.5 M</td>-->
+<!--                      <td>78.17</td>-->
+<!--                      <td>74.51</td>-->
+<!--                      <td>48.93</td>-->
+<!--                      <td class="ace-brain-td best-cell">67.20</td>-->
+<!--                  </tr>-->
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">MSEONet</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>Resnet-101</td>-->
+<!--                      <td>44.5 M</td>-->
+<!--                      <td>74.51</td>-->
+<!--                      <td>70.08</td>-->
+<!--                      <td>45.17</td>-->
+<!--                      <td class="ace-brain-td best-cell">63.25</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">EMGSNet</td>-->
+<!--                      <td>Supervised</td>-->
+<!--                      <td>ImageNet1K</td>-->
+<!--                      <td>PVT-Base</td>-->
+<!--                      <td>42.1 M</td>-->
+<!--                      <td>79.64</td>-->
+<!--                      <td>75.84</td>-->
+<!--                      <td>52.95</td>-->
+<!--                      <td class="ace-brain-td best-cell">69.47</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="domain-row domain-spatial">-->
+<!--                      <td colspan="9" style="color: #9b9b9b;"> II. Vision Foundation Models</td>-->
+<!--                  </tr>-->
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Full Fine-Tuning</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>303.1 M</td>-->
+<!--                      <td><strong>81.04</strong></td>-->
+<!--                      <td>75.12</td>-->
+<!--                      <td>54.61</td>-->
+<!--                      <td class="ace-brain-td best-cell"> 70.25</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Frozen</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>0 M</td>-->
+<!--                      <td>79.21</td>-->
+<!--                      <td>74.34</td>-->
+<!--                      <td>52.55</td>-->
+<!--                      <td class="ace-brain-td best-cell">68.70</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="domain-row domain-spatial">-->
+<!--                      <td colspan="9" style="color: #c0c0c0; padding-left: 20px;">i. General PEFT Methods-->
+<!--                      </td>-->
+<!--                  </tr>-->
+
+
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">LoRA</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>9.43 M</td>-->
+<!--                      <td>79.67</td>-->
+<!--                      <td>73.25</td>-->
+<!--                      <td>53.19</td>-->
+<!--                      <td class="ace-brain-td best-cell"> 68.70</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Adapter</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td> 6.24 M</td>-->
+<!--                      <td>80.35</td>-->
+<!--                      <td>73.91</td>-->
+<!--                      <td>54.18</td>-->
+<!--                      <td class="ace-brain-td best-cell"> 69.48</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">AdaptFormer</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>3.12 M</td>-->
+<!--                      <td>79.34</td>-->
+<!--                      <td> 76.12</td>-->
+<!--                      <td>15.18</td>-->
+<!--                      <td class="ace-brain-td best-cell">56.88</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Mona</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>5.08 M</td>-->
+<!--                      <td>80.39</td>-->
+<!--                      <td>74.96</td>-->
+<!--                      <td>53.87</td>-->
+<!--                      <td class="ace-brain-td best-cell">69.74</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="domain-row domain-spatial">-->
+<!--                      <td colspan="9" style="color: #c0c0c0; padding-left: 20px;">ii. Remote Sensing PEFT Methods-->
+<!--                      </td>-->
+<!--                  </tr>-->
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">AiRs</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td> 4.24 M</td>-->
+<!--                      <td> 79.94</td>-->
+<!--                      <td>74.78</td>-->
+<!--                      <td>54.11</td>-->
+<!--                      <td class="ace-brain-td best-cell">69.61-->
+<!--                      </td>-->
+<!--                  </tr>-->
+
+<!--                  <tr>-->
+<!--                      <td class="bench-name-td">Tea</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>11.32 M</td>-->
+<!--                      <td>80.43</td>-->
+<!--                      <td>75.01</td>-->
+<!--                      <td>54.36</td>-->
+<!--                      <td class="ace-brain-td best-cell"> 69.93</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="domain-row domain-spatial">-->
+<!--                      <td colspan="9" style="color: #c0c0c0; padding-left: 20px;">iii. Ours Approach-->
+<!--                      </td>-->
+<!--                  </tr>-->
+<!--                  <tr style="background-color: #efefef">-->
+<!--                      <td class="bench-name-td">MsRE (ours)</td>-->
+<!--                      <td>DINOv3</td>-->
+<!--                      <td>LVD-1689M</td>-->
+<!--                      <td>ViT-Large</td>-->
+<!--                      <td>4.64 M</td>-->
+<!--                      <td>80.98</td>-->
+<!--                      <td><strong>76.72</strong></td>-->
+<!--                      <td><strong>54.90</strong></td>-->
+<!--                      <td class="ace-brain-td best-cell"><strong>70.86</strong></td>-->
+<!--                  </tr>-->
+<!--                  </tbody>-->
+<!--              </table>-->
+<!--          </div>-->
+
+<!--          <div class="benchmark-notes">-->
+<!--              <h4>Notes:</h4>-->
+<!--              <ul>-->
+<!--                  <li>The results in each column is highlighted in <strong>bold</strong>.</li>-->
+<!--                  <li>All Vision Foundation models are evaluated using the Segmenter head for fair comparison.</li>-->
+<!--                  <li>"Fine-Tune Params" refer to the number of trainable parameters in the backbone on the downstream tasks.</li>-->
+<!--                  <li>"Supervised" stands for supervised learning.</li>-->
+<!--              </ul>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+        <h2 class="title is-3 section-header has-text-centered">Experiment Results && Visualization</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/class_wise_miou.png"
+             style="max-width: 70%; height: auto; display: block; margin: 0 auto;"
+             alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+            Performance comparison on Potsdam → Vaihingen and Vaihingen → Potsdam benchmarks.
+        </h2>
+      </div>
+     <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/class_wise_miou_loveda.png"
+             style="max-width: 50%; height: auto; display: block; margin: 0 auto;"
+             alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+            Performance comparison on Rural → Urban and Urban → Rural benchmarks.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+          <img src="static/images/vis_potsdam.png"
+               style="max-width: 50%; height: auto; display: block; margin: 0 auto;"
+               alt="First research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+            Visualization of results on Potsdam → Vaihingen and Vaihingen → Potsdam.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+          <img src="static/images/vis_loveda.png"
+               style="max-width: 50%; height: auto; display: block; margin: 0 auto;"
+               alt="First research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+            Visualization of results on Rural → Urban and Urban → Rural.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+         <img src="static/images/vis_feat.png"
+              style="max-width: 50%; height: auto; display: block; margin: 0 auto;"
+              alt="First research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+          PCA visualization of feature representations from different layers (Layer 6, 12, 18, and 24) of MsRE on the Potsdam → Vaihingen task.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<!-- End image carousel-->
+
+
+
+
+<!-- Youtube video -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; TODO: Replace with your YouTube video ID &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End youtube video-->
+
+
+<!-- Video carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          &lt;!&ndash; TODO: Add poster image for better preview &ndash;&gt;-->
+<!--          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4" type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          &lt;!&ndash; TODO: Add poster image for better preview &ndash;&gt;-->
+<!--          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4" type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          &lt;!&ndash; TODO: Add poster image for better preview &ndash;&gt;-->
+<!--          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4" type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
+
+<!--      &lt;!&ndash; TODO: Replace with your poster PDF &ndash;&gt;-->
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>
+<!--        @ARTICLE{11599658,-->
+<!--          author={Wang, Bin and Lv, Shun and Li, Zhi and Deng, Fei and Liu, Yiguang},-->
+<!--          journal={IEEE Transactions on Geoscience and Remote Sensing},-->
+<!--          title={MsRE: Towards Efficient Remote Sensing Segmentation via Vision Foundation Models},-->
+<!--          year={2026},-->
+<!--          volume={},-->
+<!--          number={},-->
+<!--          pages={1-1},-->
+<!--          keywords={Modeling;Remote sensing;Semantic segmentation;Training;Tuning;Decoding;LoRa;Visualization;Vegetation;Head;Vision Foundation Models;Semantic Segmentation;Parameter-Efficient Fine-Tuning;Remote Sensing},-->
+<!--          doi={10.1109/TGRS.2026.3711219}-->
+<!--        }-->
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
