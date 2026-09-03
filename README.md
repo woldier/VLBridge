@@ -39,6 +39,7 @@ Yiguang Liu<sup>1†</sup>
 
 
 ### 🔍️🔍️ NEWS
+- [2026/09/02] ✨✨ Init [Proj. Page](https://woldier.top/VLBridge).
 - [2026/08/25] ✨✨ Init Repo.
 
 ### 😀😀 The code will releasing soon
