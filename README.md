@@ -6,13 +6,20 @@ VLBridge: Domain Generalizable Remote Sensing Semantic Segmentation via Textual-
 </h2>
 
 Bin Wang <sup>1</sup>,
-Fei Deng <sup>2</sup>,
+Shuangli Du <sup>2</sup>,
+Jie Li <sup>3</sup>,
+Fei Deng <sup>4</sup>,
 Yiguang Liu<sup>1†</sup>
 
 <sup>1</sup> Sichuan University
-<sup>2</sup> Chengdu University of Technology
+<sup>2</sup> Xi’an University of Technology 
+
+<sup>3</sup> Shanxi University of Finance and Economics
+<sup>4</sup> Chengdu University of Technology
 
 <sup>†</sup> Corresponding author.
+
+
 
 [//]: # (<sup>*</sup> Equal contribution.)
 
